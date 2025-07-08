@@ -1,5 +1,6 @@
 import "./App.css";
 import {
+  Counter,
   InfoCardLayout,
   Layout,
   Level1Demo,
@@ -22,6 +23,8 @@ function App() {
           <Route path="/level-2" element={<Level2Demo />} />
 
           <Route path="/level-3" element={<Level3Demo />} />
+
+          <Route path="/counter" element={<Counter />} />
 
           <Route
             path="/product-dashboard"

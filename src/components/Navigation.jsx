@@ -5,6 +5,7 @@ const MENU = [
   { path: "/level-1", text: "Level 1" },
   { path: "/level-2", text: "Level 2" },
   { path: "/level-3", text: "Level 3" },
+  { path: "/counter", text: "Counter" },
   { path: "/product-dashboard", text: "Product Dashboard" },
   { path: "/personal-info", text: "Personal Info" },
 ];

@@ -5,6 +5,7 @@ import InfoCardLayout from "./InfoCard";
 import ProductDashboard from "./ProductDashboard";
 import PersonalInfo from "./PersonalInfo";
 import Level2Demo from "./LevelTwo";
+import Counter from "./Counter";
 import Level3Demo from "./LevelThree";
 
 export {
@@ -16,4 +17,5 @@ export {
   PersonalInfo,
   Level2Demo,
   Level3Demo,
+  Counter,
 };
