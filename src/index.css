@@ -1,0 +1,60 @@
+:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  padding: 0;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  background: #1e293b;
+  background: linear-gradient(
+    180deg,
+    rgba(30, 41, 59, 1) 0%,
+    rgba(15, 23, 42, 1) 100%
+  );
+
+  --primary-border: #334155;
+}
+
+#root {
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  min-width: 100vw;
+  min-height: 100vh;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid var(--primary-border);
+  border-radius: 12px;
+  padding: 24px;
+  background-color: rgb(30 41 59);
+}
+
+.btn-menu {
+  border: none;
+  padding: 8px;
+  border-radius: 8px;
+  color: rgb(143, 163, 192);
+  background-color: transparent;
+  transition: transform 0.3s ease;
+}
+
+.btn-menu:hover {
+  cursor: pointer;
+  background-color: #1e293b;
+}
+
+p {
+  margin: 2px 0px;
+}
