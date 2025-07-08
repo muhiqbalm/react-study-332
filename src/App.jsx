@@ -1,5 +1,7 @@
+import React from "react";
 import "./App.css";
 import {
+  AddCatForm,
   Counter,
   InfoCardLayout,
   Layout,
@@ -8,30 +10,18 @@ import {
   Level3Demo,
   PersonalInfo,
   ProductDashboard,
+  UseEffectBasic,
 } from "./components";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 function App() {
   return (
     <BrowserRouter>
-      <Layout>
+      <Layout menu={MENU}>
         <Routes>
-          <Route path="/" element={<InfoCardLayout />} />
-
-          <Route path="/level-1" element={<Level1Demo />} />
-
-          <Route path="/level-2" element={<Level2Demo />} />
-
-          <Route path="/level-3" element={<Level3Demo />} />
-
-          <Route path="/counter" element={<Counter />} />
-
-          <Route
-            path="/product-dashboard"
-            element={<ProductDashboard data={dashboardData} />}
-          />
-
-          <Route path="/personal-info" element={<PersonalInfo />} />
+          {MENU.map((item) => (
+            <Route path={item.path} element={item.element} />
+          ))}
         </Routes>
       </Layout>
     </BrowserRouter>
@@ -75,5 +65,33 @@ const dashboardData = {
     lowStockCount: 1,
   },
 };
+
+const MENU = [
+  { path: "/", text: "Info Card", element: <InfoCardLayout /> },
+  { path: "/level-1", text: "Level 1", element: <Level1Demo /> },
+  { path: "/level-2", text: "Level 2", element: <Level2Demo /> },
+  { path: "/level-3", text: "Level 3", element: <Level3Demo /> },
+  { path: "/counter", text: "Counter", element: <Counter /> },
+  {
+    path: "/product-dashboard",
+    text: "Product Dashboard",
+    element: <ProductDashboard data={dashboardData} />,
+  },
+  {
+    path: "/personal-info",
+    text: "Personal Info",
+    element: <PersonalInfo />,
+  },
+  {
+    path: "/use-effect-basic",
+    text: "Use Effect Basic",
+    element: <UseEffectBasic />,
+  },
+  {
+    path: "/post-form",
+    text: "Add Cat Form",
+    element: <AddCatForm />,
+  },
+];
 
 export default App;

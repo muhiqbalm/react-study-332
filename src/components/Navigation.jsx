@@ -1,16 +1,6 @@
 import { useLocation, useNavigate } from "react-router-dom";
 
-const MENU = [
-  { path: "/", text: "Info Card" },
-  { path: "/level-1", text: "Level 1" },
-  { path: "/level-2", text: "Level 2" },
-  { path: "/level-3", text: "Level 3" },
-  { path: "/counter", text: "Counter" },
-  { path: "/product-dashboard", text: "Product Dashboard" },
-  { path: "/personal-info", text: "Personal Info" },
-];
-
-export default function Navigation() {
+export default function Navigation({ menu }) {
   const navigate = useNavigate();
   const { pathname } = useLocation();
 
@@ -25,7 +15,7 @@ export default function Navigation() {
         borderBottom: "1px solid var(--primary-border)",
       }}
     >
-      {MENU.map((item) => {
+      {menu.map((item) => {
         const isCurrentMenu = item.path === pathname;
 
         return (

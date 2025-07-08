@@ -7,6 +7,8 @@ import PersonalInfo from "./PersonalInfo";
 import Level2Demo from "./LevelTwo";
 import Counter from "./Counter";
 import Level3Demo from "./LevelThree";
+import UseEffectBasic from "./UseEffectBasic";
+import AddCatForm from "./PostForm";
 
 export {
   Level1Demo,
@@ -18,4 +20,6 @@ export {
   Level2Demo,
   Level3Demo,
   Counter,
+  UseEffectBasic,
+  AddCatForm,
 };
